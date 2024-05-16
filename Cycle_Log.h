@@ -13,9 +13,8 @@ typedef __UINT8_TYPE__ uint8_t;
 #include <pthread.h>
 #include <memory.h>
 #include <stdarg.h>
+#include <stdbool.h>
 #include "syslog.h"
-
-typedef enum { true = 1, false = 0 } bool;
 
 typedef struct _LOG_FILE_INF_STRUCT
 {
