@@ -34,7 +34,7 @@ void FileWritePacket(uint8_t* PacketBaseAddr, int Length)
 void FileClose()
 {
     FILE *fpbak = fopen(LOG_FILE_INF.log_name, "w+");
-    char ch;
+    int ch; // 当纯文本类型时，char型足够；当二进制写入时，由于存在0xFF，导致fgetc死循环，故改成int型。
     fseek(fpbak, 0, SEEK_SET);
     bool after_start = false;
     while ((ch=fgetc(LOG_FILE_INF.fp))!=EOF) {
