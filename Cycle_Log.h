@@ -28,7 +28,7 @@ extern _LOG_FILE_INF LOG_FILE_INF;
 
 void FileInit(char *tmp_filepath, char *filepath, int LOG_FILE_MAX_SIZE);
 void FileWriteLog(char* buffer);
-void FileWritePacket(uint8_t* PacketBaseAddr, int Length);
+void FileWriteLogBytes(char* buffer, size_t len)
 void FileClose();
 
 #endif
